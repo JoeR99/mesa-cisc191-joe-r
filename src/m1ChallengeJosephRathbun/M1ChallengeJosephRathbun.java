@@ -1,10 +1,36 @@
 package m1ChallengeJosephRathbun;
 
+
+/**
+ * Lead Author(s):
+ * @author 
+ * @author 
+ * <<add additional lead authors here, with a full first and last name>>
+ * 
+ * Other contributors:
+ * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * 
+ * References:
+ * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * <<add more references here>>
+ *  
+ * Version/date: 08 / 26 / 2024
+ * 
+ * Responsibilities of class: Class contains several methods that take in parameters, calculates them using an algorithm, then returns a desired result. Methods for adding and multiplying.
+ * 							  Returning the minimum or maximum number within an array. Returning the first, middle, or last number in an array. Finally, a method for averaging the numbers
+ * 							  in an array and getting the sum of the numbers in an array.
+ * 
+ */
+
+ // See INSTRUCTIONS in TestM1Challenge
+
+
 /** 
+ * 
 Name: Joseph Rathbun
 Date: 08 / 26 / 2024
-
-
 */
 
 public class M1ChallengeJosephRathbun 
