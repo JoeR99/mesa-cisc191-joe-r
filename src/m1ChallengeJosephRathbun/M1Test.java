@@ -5,6 +5,70 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Lead Author(s):
+ * @author Tasha Frankie
+ * @author Allan Schougaard 
+ * 
+ * Other contributors:
+ * None
+ * 
+ * References:
+ * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., Rancourt, J. D., & Stein, C. (n.d.). 
+ * JUnit 5 user guide. JUnit 5. 
+ * https://junit.org/junit5/docs/current/user-guide/
+ * 
+ * Bubble sort. (2001, October 29). Wikipedia, the free encyclopedia. 
+ * https://en.wikipedia.org/wiki/Bubble_sort
+ * 
+ * Palindrome. (2020, July 15). Wikipedia, the free encyclopedia. 
+ * https://en.wikipedia.org/wiki/Palindrome
+ *  
+ * Version/date: 2.0  
+ * 
+ * Responsibilities of class:
+ * Test M1Challenge implementation
+ */
+
+/**
+ * ***********************
+ * I N S T R U C T I O N S
+ * ***********************
+ * 
+ * Your mission, should you choose to accept it:
+ * 
+ * For each of the test methods below create a method in the M1Challenge
+ * class that makes the test run and pass.
+ * 
+ * You run the test methods in this file by selecting the Run menu -> Run as -> JUnit test
+ * testAdd() should pass, but testMax() will fail.
+ * 
+ * Read the test methods below to understand what the M1Challenge class methods
+ * should do. The assertEquals methods check to see if the two arguments are
+ * equal. If they are equal the test passes; if not, the test will be marked as
+ * failed and the execution stops.
+ * 
+ * To implement a test method:
+ * 
+ * 1. Uncomment the entire test method. To uncomment a block, select the block
+ * and hold down Ctrl while typing /
+ * @Test indicates that the next method is a test method, and
+ * it must be in the source code, and not be commented out.
+ * 
+ * 2. To make the test compile and run: implement a method with the correct
+ * signature, but returning a fake value, such as -1, null or similar.
+ * See: multiply and max
+ * After this the test method should run (but fail).
+ * 
+ * 3. To make the tests pass: Change the method to return the correct value
+ * and run the test again.
+ * 
+ */
+
+
 class M1Test
 {
 	@Test // This indicates that the next method is a test method

@@ -20,7 +20,7 @@ package m1ChallengeJosephRathbun;
  * 
  * Responsibilities of class: Class contains several methods that take in parameters, calculates them using an algorithm, then returns a desired result. Methods for adding and multiplying.
  * 							  Returning the minimum or maximum number within an array. Returning the first, middle, or last number in an array. Finally, a method for averaging the numbers
- * 							  in an array and getting the sum of the numbers in an array.
+ * 							  in an array and another for getting the sum of the numbers in an array.
  * 
  */
 
