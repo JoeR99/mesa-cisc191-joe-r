@@ -1,6 +1,6 @@
 package m22ChallengeJosephRathbun;
 
-import m22ChallengeJosephRathbun.M22ChallengeJosephRathbun.*;
+import static m22ChallengeJosephRathbun.M22ChallengeJosephRathbun.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -61,7 +61,7 @@ import org.junit.jupiter.api.Test;
  * 
  */
 
-public class M22Test
+class M22ChallengeJosephRathbunTest
 {
 	@Test
 	void testContains()
