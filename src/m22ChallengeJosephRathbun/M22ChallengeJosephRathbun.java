@@ -23,13 +23,14 @@ public class M22ChallengeJosephRathbun
 		int n = array.length;
 		
 		// For loop to iterate through array[i] for n amount of times	
-		for ( i = 0; i < n ; i++ ) {	
-			
+		for ( i = 0; i < n ; i++ ) 
+		{		
 		// If statement to check if there is a single element in the array that is equal to the value 
 		// Return true as soon as they are equal	
-			
 			if (array[i] == value) 
+			{
 				return true;
+			}
 		}
 		
 		// Return false if code made it through the for loop without returning true.
@@ -55,10 +56,12 @@ public class M22ChallengeJosephRathbun
 		int indexNumber = -1;
 		
 		// For loop to iterate through each index in the array parameter, marks the indexNumber when the value is equal to array[i]
-		for ( int i = 0; i < n ; i++) {
+		for ( int i = 0; i < n ; i++) 
+		{
 			
 			// Conditional to check if array[i] is equal to value. If it is then set indexNumber to i. Returns the indexNumber as soon as possible
-			if (array[i] == value) {
+			if (array[i] == value) 
+			{
 				
 				indexNumber = i;
 				return indexNumber;
@@ -82,19 +85,17 @@ public class M22ChallengeJosephRathbun
 	{
 		// Initialize values to iterate through array with for loop, the length of the array,
 		// and a count to increase by 1 each time a value appears in the array.
-		
 		int i;
 		int n = array.length;
 		int count = 0;
 		
 		// For loop to check array for any value that is equal to the current index of the array.
 		
-		for ( i = 0; i < n; i++ ) {
-			
+		for ( i = 0; i < n; i++ ) 
+		{
 			// If current index of array is equal to value, then increment count by 1.
 			if (array[i] == value)
 				count++;
-			
 		}
 		
 		// Print line to check the amount of times a value shows up in the array, for debugging.
@@ -119,10 +120,12 @@ public class M22ChallengeJosephRathbun
 		// For loop that starts at the first index and stops at the length of the array - 1.
 		// Compares the current index with the one ahead of it so we need to correct the for it.
 		
-		for ( i = 0 ; i < n - 1 ; i++) {
+		for ( i = 0 ; i < n - 1 ; i++) 
+		{
 			
 			// If the current index value is bigger than the next index value then the array is not in order and returns false
-			if ( array[i] > array[i+1]) {
+			if ( array[i] > array[i+1]) 
+			{
 				System.out.println("This is not in order");
 				return false;				
 			}
@@ -172,12 +175,12 @@ public class M22ChallengeJosephRathbun
 		
 		// For loop to iterate through array parameter, we limit the loop by n - 1 because we are correcting
 		// for the loop checking ahead one index to compare with the previous index.
-		for ( i = 0 ; i < n - 1 ; i++ ) {
-			
+		for ( i = 0 ; i < n - 1 ; i++ ) 
+		{
 			// if the current index is bigger than the next index then we swap elements at the current index
-			if (array[i] > array[i+1]) {
-				
-			swapElements(array, i);
+			if (array[i] > array[i+1]) 
+			{	
+				swapElements(array, i);
 			}
 		}	
 		
@@ -195,13 +198,12 @@ public class M22ChallengeJosephRathbun
 	
 	public static char[] bubbleSort(char[] array)
 	{
-		
 		// While loop that checks the parameter array and if it is not in order, then run the bubbleUp method
 		// Which will sort the array alphabetically, stops looping once the array returns true of being inOrder
-		while (inOrder(array) == false) {
+		while (inOrder(array) == false) 
+		{
 			bubbleUp(array);
 		}
-		
 		// Return sorted array
 		return array;
 	}
@@ -224,11 +226,10 @@ public class M22ChallengeJosephRathbun
 		char[] copyArray = new char[n];
 		
 		// For loop to copy each index in the array to each index in the copyArray.
-		for( i = 0 ; i < n ; i++) {
-			
+		for( i = 0 ; i < n ; i++) 
+		{	
 			copyArray[i] = array[i];	
-		}
-		
+		}	
 		// Print "Copy" for clarity on the amount of copied arrays
 		System.out.println("Copy");
 		return copyArray;
@@ -245,8 +246,7 @@ public class M22ChallengeJosephRathbun
 	 */
 	
 	public static boolean arrayElementsEqual(char[] array1, char[] array2) 
-	{
-		
+	{	
 		// Initialize variable for the amount of times to iterate through the arrays
 		int n = array1.length;
 		
@@ -255,7 +255,6 @@ public class M22ChallengeJosephRathbun
 		{
 			return false;
 		}
-		
 		else 
 		{
 			// For loop to iterate through two arrays of the same size/length
@@ -263,10 +262,11 @@ public class M22ChallengeJosephRathbun
 			{
 				// If the index in each array are not equal then swiftly return false
 				if (array1[i] != array2[i])
+				{
 				return false;	
+				}
 			}
-		}
-		
+		}	
 		// Return true if code passes through for loop and if statements
 		return true;
 	}				
@@ -288,16 +288,13 @@ public class M22ChallengeJosephRathbun
 		// Create a new character array and name it backwardsArray for obvious reasons
 		char[] backwardsArray = new char[n];
 
-			// For loop to make each index of backwardsArray equal to the length of the
-			// array -1 and -i to work in reverse and correcting for length to index position
-			for ( i = 0 ; i < n ; i++ ) {
-				
-				backwardsArray[i] = array[n-1-i];		
-			}
-			
-			// Print line to check if array returned properly.
-			System.out.println("Backed");
-			return backwardsArray;	
+		// For loop to make each index of backwardsArray equal to the length of the
+		// array -1 and -i to work in reverse and correcting for length to index position
+		for ( i = 0 ; i < n ; i++ ) 
+		{	
+			backwardsArray[i] = array[n-1-i];		
+		}
+		return backwardsArray;	
 	}
 	
 	
@@ -322,17 +319,18 @@ public class M22ChallengeJosephRathbun
 		
 		// Use the arrayElementsEqual method I made earlier on the parameter array and the copy
 		// to determine if they are equal, if they are return true.
-		if (arrayElementsEqual(array, copy) == true) {	
+		if (arrayElementsEqual(array, copy) == true) 
+		{	
 			System.out.println("Is Palindrome!");
 			return true;
 		}
 		
 		// return false if arrayElementsEqual returns false
-		else {
+		else 
+		{
 			System.out.println("Is  NOT Palindrome!");
 			return false;	
 		}
-		
 	}
 	
 	
@@ -347,7 +345,6 @@ public class M22ChallengeJosephRathbun
 	
 	public static int getElement(int[][] data, int row, int col) 
 	{
-		
 		// Initialize variables for row and column, x and y are obvious choices respectively
 		int x = row;
 		int y = col;		
@@ -370,7 +367,6 @@ public class M22ChallengeJosephRathbun
 	
 	public static int addRow(int[][] data, int row) 
 	{
-		
 		// Initialize variables to increment up,
 		// find the length of the row for current 2D data,
 		// and total which will add up each element in row.
@@ -403,16 +399,13 @@ public class M22ChallengeJosephRathbun
 	{
 		int i;
 		int row = data.length;
-		System.out.println(row);
 		int total = 0;
 		
-		System.out.println("Number of rows: " + row);
-		
 		// for loop to iterate through each row of a desired column.
-		for ( i = 0 ; i < row ; i++) {
+		for ( i = 0 ; i < row ; i++) 
+		{
 			total += data[i][col];
 		}
-		
 		// return the total number found from adding up the elements of each row in desired column.
 		return total;
 	}
@@ -434,12 +427,10 @@ public class M22ChallengeJosephRathbun
 		int total = 0;
 			
 		// For loop to iterate through each row and column at same index and adding them up
-		for ( i = 0 ; i < size ; i++ ) {
-			
+		for ( i = 0 ; i < size ; i++ )
+		{
 			total += data[i][i];
-			
 		}	
-		
 		return total;
 	}
 	
@@ -463,12 +454,10 @@ public class M22ChallengeJosephRathbun
 		// For loop to iterate through each row and column, we being with the last column
 		// going down with size-i-1 to start on the right side of the matrix ( -1 to offset size and index relation).
 		// Adds up the element at said row and column
-		for ( i = 0 ; i < size ; i++ ) {
-			
+		for ( i = 0 ; i < size ; i++ ) 
+		{
 			total += data[i][size-i-1];
-			
-		}	
-			
+		}		
 		return total;
 	}
 	
@@ -483,7 +472,6 @@ public class M22ChallengeJosephRathbun
 	
 	public static int addLastRowElement(int[][] data) 
 	{
-		
 		// Initialize variables for iteration and total of last element in each row
 		int i;
 		int total = 0;
@@ -493,31 +481,13 @@ public class M22ChallengeJosephRathbun
 		int y;
 		
 		// for loop to iterate to amount of rows in 2D data array
-		for ( i = 0 ; i < x ; i++) {
-			
+		for ( i = 0 ; i < x ; i++) 
+		{
 			y = data[i].length - 1;
-			
-			System.out.println("Number of y: " + y);
-			
 			// add total to itself at the element point of row = index and column = length of current row
-			total += data[i][y];
-				
+			total += data[i][y];	
 			System.out.println("Number of total: " + total);
-		}
-				
+		}	
 		return total;
 	}
-	
-	// Use this template for the methods
-	/**
-	 * Purpose:
-	 * 
-	 * @param array
-	 * @return
-	 */
-//	public static ??? ???(???[] array)
-//	{
-//		return ???;
-//	}
-
 }
