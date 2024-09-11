@@ -31,8 +31,7 @@ public class M22ChallengeJosephRathbun
 			{
 				return true;
 			}
-		}
-		
+		}	
 		// Return false if code made it through the for loop without returning true.
 		return false;
 	}
