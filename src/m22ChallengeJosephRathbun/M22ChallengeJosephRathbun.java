@@ -9,6 +9,7 @@ public class M22ChallengeJosephRathbun
 	 * @param value or character to compare to array
 	 * @return true if the value is in the array, otherwise false
 	 */
+	
 	public static boolean contains(char[] array, char value)
 	{
 		// TODO: return the correct value
@@ -20,31 +21,19 @@ public class M22ChallengeJosephRathbun
 		
 		int i;
 		int n = array.length;
-		int count = 0;
 		
-		// For loop to iterate through array[i] for n amount of times
-		
+		// For loop to iterate through array[i] for n amount of times	
 		for ( i = 0; i < n ; i++ ) {	
 			
-		// If statement to check if the there is a single element in the array that is equal to the value 
-		// Increase count by 1 each time 	
+		// If statement to check if there is a single element in the array that is equal to the value 
+		// Return true as soon as they are equal	
 			
 			if (array[i] == value) 
-				count++;
-			
-		}		
+				return true;
+		}
 		
-		// Conditional to check if count has increased at all, if it has then return true, return false if not.
-		if (count > 0) {
-			// Printing out line to indicate true and what value for debugging.
-			System.out.println("The value " + value +" is in the array.");
-			return true;
-		}
-		else {
-			// Printing out line to indicate false and what value for debugging.
-			System.out.println("The value " + value +" is not in the array.");
-			return false;
-		}
+		// Return false if code made it through the for loop without returning true.
+		return false;
 	}
 	
 	
@@ -59,36 +48,24 @@ public class M22ChallengeJosephRathbun
 	
 	public static int find(char[] array, char value)
 	{
-		// Initialize values for iterating through an array, the amount of times needed to iterate, a count to indicate first time,
-		// and a value to store the index number for the first time the value is checked.
-		// Set indexNumber and firstIndexNumber to -1 because it will return as -1 if the value is not in the array.
-		int i;
+		// Initialize variable for the amount of times needed to iterate and a value to store the index number for the first time the value is checked.
 		int n = array.length;
-		int count = 0;
-		int indexNumber= -1;
-		int firstIndexNumber = -1;
+		
+		// Initialize variable for to store the index number for the first time the value is checked.
+		int indexNumber = -1;
 		
 		// For loop to iterate through each index in the array parameter, marks the indexNumber when the value is equal to array[i]
-		for ( i = 0; i < n ; i++) {
+		for ( int i = 0; i < n ; i++) {
 			
-			// Conditional to check if array[i] is equal to value. If it is then set indexNumber to i.
+			// Conditional to check if array[i] is equal to value. If it is then set indexNumber to i. Returns the indexNumber as soon as possible
 			if (array[i] == value) {
 				
 				indexNumber = i;
-				count++;
-			}
-			if (count == 1) {
-				firstIndexNumber = indexNumber;
-			}
-			
-		}
-		
-		// Print line to indicate what number is the first index for debugging.
-		System.out.println("This is the first index: " + firstIndexNumber);
-		if ( indexNumber >= 0)
-			return firstIndexNumber; 
-		else
-			return firstIndexNumber;
+				return indexNumber;
+			}		
+		}	
+		// Return -1 if the code makes it through the for loop without returning an indexNumber
+		return indexNumber;
 	}
 	
 	
@@ -167,30 +144,18 @@ public class M22ChallengeJosephRathbun
 	
 	public static char[] swapElements(char[] array, int value) {
 		
-		// Character variable that serves as a placeholder in memory for the value being replaced 
+		// Initialize Character variable that serves as a placeholder in memory for the value being replaced 
 		char temp = array[value];
 		
-		// If value is 0 then we change the index at 0 first by making it equal to the value at index 1,
-		// then we make the value at index 1 equal to temp because the value at index 0 has been lost.
-		// return array with swapped values
-		if (value == 0) {
-			array[0] = array[1];
-			array[1] = temp;
-			return array;
-		}	
+		// Set the index at value to the next index, then set the index at value + 1 to temp
+		array[value] = array[value+1];
+		array[value+1] = temp;
 		
-		// If value is 1 then we change the index at 1 first by making it equal to the value at index 2,
-		// then we make the value at index 2 equal to temp because the value at index 1 has been lost.
-		// return array with swapped values
-		if (value == 1)
-			array[1] = array[2];
-			array[2] = temp;
-			return array;
-		
+		// Return swapped array
+		return array;	
 	}
 	
-	
-	// Use this template for the methods
+
 		/**
 		 * Purpose: A method to sort character arrays by checking the current index with the next one
 		 * 			and swapping them if the values are not in order.
@@ -221,20 +186,27 @@ public class M22ChallengeJosephRathbun
 	}
 	
 	
-//	public static char[] bubbleSort(char[] array)
-//	{
-//		char [] tempArray = array;
-//		
-//		while (inOrder(tempArray) == false) {
-//			System.out.println("Bubbled");
-//			bubbleUp(tempArray);
-//			System.out.println("Bubs");
-//		}
-//		return tempArray;
-//	}
+	/**
+	 * Purpose: Method to sort the elements of a character array
+	 * 
+	 * @param array to search and copy
+	 * @return an exact copy of the input array
+	 */
+	
+	public static char[] bubbleSort(char[] array)
+	{
+		
+		// While loop that checks the parameter array and if it is not in order, then run the bubbleUp method
+		// Which will sort the array alphabetically, stops looping once the array returns true of being inOrder
+		while (inOrder(array) == false) {
+			bubbleUp(array);
+		}
+		
+		// Return sorted array
+		return array;
+	}
 
 	
-	// Use this template for the methods
 	/**
 	 * Purpose: Copy all of the elements for any array
 	 * 
@@ -275,41 +247,29 @@ public class M22ChallengeJosephRathbun
 	public static boolean arrayElementsEqual(char[] array1, char[] array2) 
 	{
 		
-		// Initialize variables for iterating through the arrays, because we are checking if the
-		// lengths of the arrays are equal to each other we can simply set n to any arrays length, 
-		// in this case array1.
-		
-		int i;
+		// Initialize variable for the amount of times to iterate through the arrays
 		int n = array1.length;
-		int count = 0;
 		
-		// if the lengths of the arrays are not equal then return false early in the method
-		if ( array1.length != array2.length) {
+		// If the lengths of the arrays are not equal then return false early in the method
+		if ( array1.length != array2.length) 
+		{
 			return false;
 		}
 		
-		else {
-			
+		else 
+		{
 			// For loop to iterate through two arrays of the same size/length
-			for ( i = 0 ; i < n ; i++) {
-				
-				// if the index in each array are equal, then increment count by 1
+			for ( int i = 0 ; i < n ; i++) 
+			{
+				// If the index in each array are not equal then swiftly return false
 				if (array1[i] != array2[i])
-					count++;	
+				return false;	
 			}
+		}
 		
-			// If count increases at all then return false
-			if (count >= 1) {
-				System.out.println("Arrays are not Equal");
-				return false;
-			}
-			// If count is still equal to 0 then the arrays are equal	
-			else {
-				System.out.println("Arrays are Equal");
-				return true;
-			}
-		}				
-	}
+		// Return true if code passes through for loop and if statements
+		return true;
+	}				
 	
 	
 	/**

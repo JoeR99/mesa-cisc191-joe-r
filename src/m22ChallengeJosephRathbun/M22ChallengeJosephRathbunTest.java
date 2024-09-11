@@ -207,21 +207,21 @@ class M22ChallengeJosephRathbunTest
 		assertArrayEquals("ABC".toCharArray(), array3);
 	}
 
-//	/**
-//	 * The bubbleSort method sorts an array.
-//	 * Hint: while the elements are not inOrder, repeatedly use bubbleUp
-//	 */
-//	@Test
-//	void testBubbleSort()
-//	{
-//		char[] array0 = {'C', 'B', 'A'};
-//	    bubbleSort(array0);
-//		assertArrayEquals("ABC".toCharArray(), array0);
-//
-//	    char[] array10 = "LKJHGFDSA".toCharArray();
-//	    bubbleSort(array10);
-//	    assertArrayEquals("ADFGHJKLS".toCharArray(), array10);
-//	}
+	/**
+	 * The bubbleSort method sorts an array.
+	 * Hint: while the elements are not inOrder, repeatedly use bubbleUp
+	 */
+	@Test
+	void testBubbleSort()
+	{
+		char[] array0 = {'C', 'B', 'A'};
+	    bubbleSort(array0);
+		assertArrayEquals("ABC".toCharArray(), array0);
+
+	    char[] array10 = "LKJHGFDSA".toCharArray();
+	    bubbleSort(array10);
+	    assertArrayEquals("ADFGHJKLS".toCharArray(), array10);
+	}
 
 	/**
 	 * The copy method returns a new array with the same elements as the original array.
