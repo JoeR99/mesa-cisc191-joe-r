@@ -3,7 +3,7 @@ package m23ChallJosephRathbun;
 import edu.gatech.cc.DigitalPicture;
 import edu.gatech.cc.Pixel;
 
-public class m23challJoeR
+public class M23challJoeR
 {
 	/**
 	 * Alters the picture so that each pixel's blue channel has been zeroed out. All

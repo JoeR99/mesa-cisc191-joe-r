@@ -78,7 +78,7 @@ class BoatJosephRathbunTest
 		assertEquals("Aqualina", boat.getMake());
 		assertEquals(Color.GREEN, boat.getColor());
 		assertEquals(0, boat.getSpeed());
-  	assertEquals(-1, boat.getPrice());
+		assertEquals(-1, boat.getPrice());
 	}
 
 	@Test
@@ -86,7 +86,7 @@ class BoatJosephRathbunTest
 	{
 		BoatJosephRathbun boat1 = new BoatJosephRathbun("Aqualina", Color.GREEN);
 		boat1.setPrice(100);
-      BoatJosephRathbun boat2 = new BoatJosephRathbun(boat1);	
+		BoatJosephRathbun boat2 = new BoatJosephRathbun(boat1);	
 		assertEquals("Aqualina", boat2.getMake());
 		assertEquals(Color.GREEN, boat2.getColor());
 		assertEquals(0, boat2.getSpeed());
@@ -137,9 +137,9 @@ class BoatJosephRathbunTest
 	void testCreateNewSerialNumber()
 	{
 		// The boat class creates a unique serial numbers for each boat
-      // See Java Static Variables in https://beginnersbook.com/2013/04/java-static-class-block-methods-variables/
+		// See Java Static Variables in https://beginnersbook.com/2013/04/java-static-class-block-methods-variables/
 		assertTrue(BoatJosephRathbun.createNewSerialNumber() > 0);
-      // Serial numbers are monotonically increasing
+		// Serial numbers are monotonically increasing
 	    assertTrue(BoatJosephRathbun.createNewSerialNumber() < BoatJosephRathbun.createNewSerialNumber());
 		assertEquals(BoatJosephRathbun.createNewSerialNumber() + 1,  BoatJosephRathbun.createNewSerialNumber());
 	}

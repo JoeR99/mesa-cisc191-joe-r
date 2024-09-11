@@ -33,7 +33,7 @@ import edu.gatech.cc.Pixel;
  * 
  */
 
-public class m23challJoeRTest
+public class M23challJoeRTest
 {
 
 	/**
@@ -47,7 +47,7 @@ public class m23challJoeRTest
 		Picture studentSol = new Picture("bees.png");
 
 		/* apply the zeroBlue filter */
-		LogicJosephRathbun.zeroBlue(studentSol);
+		M23challJoeR.zeroBlue(studentSol);
 
 		/* obtain the 2D Pixel array representation for both objects */
 		Pixel[][] pixels = studentSol.getPixels2D(); // student code
@@ -79,10 +79,10 @@ public class m23challJoeRTest
 	{
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png");
+		Picture p = new Picture("beach.png");
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.blackAndWhite(p);
+		M23challJoeR.blackAndWhite(p);
 
 		// obtain the 2D Pixel array representation for both objects
 		Pixel[][] pixels = p.getPixels2D();
@@ -109,10 +109,10 @@ public class m23challJoeRTest
 	{
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png"); // make sure you're using this image as the tester needs it
+		Picture p = new Picture("beach.png"); // make sure you're using this image as the tester needs it
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.negative(p);
+		M23challJoeR.negative(p);
 
 		// obtain the 2D Pixel array representation for both objects
 		Pixel[][] pixels = p.getPixels2D();
@@ -141,10 +141,10 @@ public class m23challJoeRTest
 	void testSunset()
 	{
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png");
+		Picture p = new Picture("beach.png");
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.makeSunset(p, 1.5, .9);
+		M23challJoeR.makeSunset(p, 1.5, .9);
 
 		// obtain the 2D Pixel array representation for both objects
 		Pixel[][] pixels = p.getPixels2D();
@@ -182,11 +182,11 @@ public class m23challJoeRTest
 		// Horizontally or from left to right.
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png");
-		Picture original = new Picture("bees.png");
+		Picture p = new Picture("beach.png");
+		Picture original = new Picture("beach.png");
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.mirrorHorizontal(p);
+		M23challJoeR.mirrorHorizontal(p);
 
 		Pixel[][] pixels = original.getPixels2D();
 		Pixel[][] solution = p.getPixels2D();
@@ -233,11 +233,11 @@ public class m23challJoeRTest
 		// (from top to bottom).
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png");
-		Picture p2 = new Picture("bees.png"); // original
+		Picture p = new Picture("beach.png");
+		Picture p2 = new Picture("beach.png"); // original
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.mirrorVertical(p);
+		M23challJoeR.mirrorVertical(p);
 
 		Pixel[][] pixels = p.getPixels2D();
 		Pixel[][] pixels2 = p2.getPixels2D(); // original
@@ -270,11 +270,11 @@ public class m23challJoeRTest
 	void testBlur()
 	{
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("bees.png");
-		Picture p2 = new Picture("bees.png"); // original
+		Picture p = new Picture("beach.png");
+		Picture p2 = new Picture("beach.png"); // original
 
 		// Apply the student code and solution code
-		LogicJosephRathbun.blur(p);
+		M23challJoeR.blur(p);
 
 		// obtain the 2D Pixel array representation for both objects
 		Pixel[][] pixels = p.getPixels2D();
