@@ -159,13 +159,13 @@ public class M22ChallengeJosephRathbun
 	}
 	
 
-		/**
-		 * Purpose: A method to sort character arrays by checking the current index with the next one
-		 * 			and swapping them if the values are not in order.
-		 * 
-		 * @param array to search
-		 * @return array with values swapped to be in order
-		 */
+	/**
+	* Purpose: A method to sort character arrays by checking the current index with the next one
+	* 			and swapping them if the values are not in order.
+	* 
+	* @param array to search
+	* @return array with values swapped to be in order
+	*/
 	
 	public static char[] bubbleUp(char[] array)
 	{
@@ -236,7 +236,6 @@ public class M22ChallengeJosephRathbun
 	}
 	
 	
-	// Use this template for the methods
 	/**
 	 * Purpose: Checks to see if two arrays are equal.
 	 * 
@@ -462,13 +461,12 @@ public class M22ChallengeJosephRathbun
 	}
 	
 	
-	// Use this template for the methods
-		/**
-		 * Purpose: Add up the last element of each row within the 2D data array.
-		 * 
-		 * @param 2D array to search
-		 * @return total number found from adding the last element in each row
-		 */
+	/**
+	 * Purpose: Add up the last element of each row within the 2D data array.
+	 * 
+	 * @param 2D array to search
+	 * @return total number found from adding the last element in each row
+	 */
 	
 	public static int addLastRowElement(int[][] data) 
 	{
