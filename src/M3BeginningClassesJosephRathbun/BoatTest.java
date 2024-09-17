@@ -1,4 +1,4 @@
-package m3BeginningClassesJosephRathbun;
+package M3BeginningClassesJosephRathbun;
 
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
