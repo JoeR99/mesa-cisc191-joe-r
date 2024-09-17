@@ -17,7 +17,7 @@ public class CreditCardCharge
 		private int currentDay; // CreditCardCharge HAS-A Day
 		
 		// Initialize variables for the boat that the buyer wants
-		private BoatJosephRathbun desiredBoat; // CreditCardCharge HAS-A Boat (that is being purchased)
+		private Boat desiredBoat; // CreditCardCharge HAS-A Boat (that is being purchased)
 		
 		// Initialize variables for the name of the buyer
 		private String currentBuyer; // CreditCardCharge HAS-A Buyer
@@ -27,7 +27,7 @@ public class CreditCardCharge
 		
 		// Constructor for the charges made with a credit card, passes 3 integers for the date,
 		// a boat to be bought, the name of the buyer, and the credit card being used.
-		public CreditCardCharge(int year, int month, int day, BoatJosephRathbun boat, String buyer, CreditCard card )
+		public CreditCardCharge(int year, int month, int day, Boat boat, String buyer, CreditCard card )
 		{
 			// Set the initialized variables to the parameters passed through the constructor
 			currentYear = year ; currentMonth = month ; currentDay = day ; 
