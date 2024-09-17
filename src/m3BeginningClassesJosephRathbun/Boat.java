@@ -29,7 +29,7 @@ import java.awt.Color;
 
 /**
  */
-public class BoatJosephRathbun
+public class Boat
 {
 	// TODO: Implement and comment all HAS-A relationships separately
 	// For instance: A boat has a make
@@ -181,7 +181,7 @@ public class BoatJosephRathbun
 	}
 	
 	// This is the default Boat constructor
-	public BoatJosephRathbun()
+	public Boat()
 	{
 		// Set the default make and color to null
 		make = null;;
@@ -203,7 +203,7 @@ public class BoatJosephRathbun
 	}
 	
 	// Boat Constructor for setting a make and color only
-	public BoatJosephRathbun(String startMake, Color startColor) 
+	public Boat(String startMake, Color startColor) 
 	{
 		// Initialize the default constructor to save me from repeating variables 
 		this();
@@ -214,7 +214,7 @@ public class BoatJosephRathbun
 	}
 	
 	// Copy Constructor for Boat, sets make, color, speed, and price to parameter boat values
-	public BoatJosephRathbun(BoatJosephRathbun boat)
+	public Boat(Boat boat)
 	{
 		// Initialize the default constructor to save me from repeating variables
 		this();

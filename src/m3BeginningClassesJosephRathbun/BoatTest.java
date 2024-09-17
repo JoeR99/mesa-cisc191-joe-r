@@ -59,13 +59,13 @@ import java.awt.Color;
  * and run the test again.
  * 
  */
-class BoatJosephRathbunTest
+class BoatTest
 {
 
 	@Test
 	void testNoArgConstructor()
 	{
-		BoatJosephRathbun boat = new BoatJosephRathbun();
+		Boat boat = new Boat();
 		assertEquals(null, boat.getMake());
 		assertEquals(null, boat.getColor());
 		assertEquals(0, boat.getSpeed());
@@ -75,7 +75,7 @@ class BoatJosephRathbunTest
 	@Test
 	void testConstructor()
 	{
-		BoatJosephRathbun boat = new BoatJosephRathbun("Aqualina", Color.GREEN);
+		Boat boat = new Boat("Aqualina", Color.GREEN);
 		assertEquals("Aqualina", boat.getMake());
 		assertEquals(Color.GREEN, boat.getColor());
 		assertEquals(0, boat.getSpeed());
@@ -85,9 +85,9 @@ class BoatJosephRathbunTest
 	@Test
 	void testCopyConstructor()
 	{
-		BoatJosephRathbun boat1 = new BoatJosephRathbun("Aqualina", Color.GREEN);
+		Boat boat1 = new Boat("Aqualina", Color.GREEN);
 		boat1.setPrice(100);
-		BoatJosephRathbun boat2 = new BoatJosephRathbun(boat1);	
+		Boat boat2 = new Boat(boat1);	
 		assertEquals("Aqualina", boat2.getMake());
 		assertEquals(Color.GREEN, boat2.getColor());
 		assertEquals(0, boat2.getSpeed());
@@ -97,7 +97,7 @@ class BoatJosephRathbunTest
 	@Test
 	void testAccessorsAndMutators()
 	{
-		BoatJosephRathbun boat = new BoatJosephRathbun();
+		Boat boat = new Boat();
 		boat.setColor(Color.GREEN);
 		assertEquals(Color.GREEN, boat.getColor());
 	    boat.setColor(Color.RED);
@@ -109,7 +109,7 @@ class BoatJosephRathbunTest
 	@Test
 	void testSpeedMethods()
 	{
-		BoatJosephRathbun boat = new BoatJosephRathbun("BHM", Color.BLUE);
+		Boat boat = new Boat("BHM", Color.BLUE);
 		assertEquals(0, boat.getSpeed());	
 		boat.speedUp();
 		assertEquals(1, boat.getSpeed());
@@ -126,10 +126,10 @@ class BoatJosephRathbunTest
 	@Test
 	void testToString()
 	{
-		BoatJosephRathbun boat = new BoatJosephRathbun("BSC", Color.GREEN);
+		Boat boat = new Boat("BSC", Color.GREEN);
 		assertEquals("Boat: make: BSC color: java.awt.Color[r=0,g=255,b=0]", boat.toString());
 		
-		BoatJosephRathbun boat2 = new BoatJosephRathbun("Marlin", Color.RED);
+		Boat boat2 = new Boat("Marlin", Color.RED);
 		assertEquals("Boat: make: Marlin color: java.awt.Color[r=255,g=0,b=0]", boat2.toString());
 	}
 
@@ -139,10 +139,10 @@ class BoatJosephRathbunTest
 	{
 		// The boat class creates a unique serial numbers for each boat
 		// See Java Static Variables in https://beginnersbook.com/2013/04/java-static-class-block-methods-variables/
-		assertTrue(BoatJosephRathbun.createNewSerialNumber() > 0);
+		assertTrue(Boat.createNewSerialNumber() > 0);
 		// Serial numbers are monotonically increasing
-	    assertTrue(BoatJosephRathbun.createNewSerialNumber() < BoatJosephRathbun.createNewSerialNumber());
-		assertEquals(BoatJosephRathbun.createNewSerialNumber() + 1,  BoatJosephRathbun.createNewSerialNumber());
+	    assertTrue(Boat.createNewSerialNumber() < Boat.createNewSerialNumber());
+		assertEquals(Boat.createNewSerialNumber() + 1,  Boat.createNewSerialNumber());
 	}
 
 	@Test
@@ -150,20 +150,20 @@ class BoatJosephRathbunTest
 	{
 		// Each boat is assigned a unique immutable serial number when they are created
 		// Hint: use createNewSerialNumber
-		BoatJosephRathbun boat0 = new BoatJosephRathbun();
+		Boat boat0 = new Boat();
 		int boat0SerialNumber = boat0.getSerialNumber();
 		assertTrue(boat0SerialNumber > 0);
 		
 		// Check that serial number does not change
 		assertEquals(boat0SerialNumber, boat0.getSerialNumber());
 		assertEquals(boat0SerialNumber, boat0.getSerialNumber());
-		BoatJosephRathbun boat1 = new BoatJosephRathbun("BMC", Color.GREEN);
+		Boat boat1 = new Boat("BMC", Color.GREEN);
 		// Check that serial number does not change, again
 		assertEquals(boat0SerialNumber, boat0.getSerialNumber());	
 
 		// Check that serial numbers increase
 		assertTrue(boat1.getSerialNumber() > boat0SerialNumber);
-		BoatJosephRathbun boat2 = new BoatJosephRathbun(boat1);
+		Boat boat2 = new Boat(boat1);
 		assertTrue(boat2.getSerialNumber() > boat1.getSerialNumber());
 		
 		// Check that serial number does not change, again
@@ -179,7 +179,7 @@ class BoatJosephRathbunTest
 	void testBoatHasAnOwner()
 	{
 		Person owner = new Person("Alexandra Keaton", "858-555-1313", "92123");
-		BoatJosephRathbun boat = new BoatJosephRathbun("SailyBoat", Color.MAGENTA);
+		Boat boat = new Boat("SailyBoat", Color.MAGENTA);
 		boat.setPrice(188888);
 		boat.setOwner(owner);
 		assertEquals("Alexandra Keaton", boat.getOwner().getName());
@@ -193,7 +193,7 @@ class BoatJosephRathbunTest
 	{ 
 		Person owner = new Person("Alexandra Keaton", "858-555-1313", "92123");
 		Person captain = new Person("Cappy Tain", "858-555-999", "92101");
-		BoatJosephRathbun boat = new BoatJosephRathbun("McBoatFace", Color.BLUE);
+		Boat boat = new Boat("McBoatFace", Color.BLUE);
 		boat.setCaptain(captain);
 		boat.setOwner(owner);
 		assertEquals("Cappy Tain", boat.getCaptain().getName());
@@ -208,9 +208,9 @@ class BoatJosephRathbunTest
 	{
       // A harbor has-many boats
 
-		BoatJosephRathbun boat1 = new BoatJosephRathbun("BMC", Color.GREEN);
-		BoatJosephRathbun boat2 = new BoatJosephRathbun("BMX", Color.RED);
-		BoatJosephRathbun boat3 = new BoatJosephRathbun("UXB", Color.YELLOW);
+		Boat boat1 = new Boat("BMC", Color.GREEN);
+		Boat boat2 = new Boat("BMX", Color.RED);
+		Boat boat3 = new Boat("UXB", Color.YELLOW);
 		
       // Harbor is empty when just created
 		Harbor stock = new Harbor(5);
@@ -223,17 +223,17 @@ class BoatJosephRathbunTest
 		// Hint: parkBoatAt is not just an accessor, and not just a mutator
       // Park new boat, and return the boat the was parked there
 		assertEquals(null, stock.parkBoatAt(boat1, 3));
-		BoatJosephRathbun retrievedBoat = stock.parkBoatAt(boat2, 3);
+		Boat retrievedBoat = stock.parkBoatAt(boat2, 3);
 		assertEquals(boat1, retrievedBoat);
 		retrievedBoat = stock.parkBoatAt(boat3, 3);
 		assertEquals(boat2, retrievedBoat);
-		BoatJosephRathbun[] inventory = stock.getInventory();
-		assertArrayEquals(new BoatJosephRathbun[]{null, null, null, boat3, null}, inventory);
+		Boat[] inventory = stock.getInventory();
+		assertArrayEquals(new Boat[]{null, null, null, boat3, null}, inventory);
 		stock.parkBoatAt(boat2, 1);
       // The inventory is a carbon copy list of boats that is handed out to interested parties.
       // But these parties cannot change the inventory, only the harbor can do that.
-		assertArrayEquals(new BoatJosephRathbun[]{null, null, null, boat3, null}, inventory); // This is correct!
-		assertArrayEquals(new BoatJosephRathbun[]{null, boat2, null, boat3, null}, stock.getInventory());
+		assertArrayEquals(new Boat[]{null, null, null, boat3, null}, inventory); // This is correct!
+		assertArrayEquals(new Boat[]{null, boat2, null, boat3, null}, stock.getInventory());
 	}
 
 	@Test
@@ -245,7 +245,7 @@ class BoatJosephRathbunTest
 		CreditCard card = new CreditCard("4444111122223333", "12/24", "123", person);
 		assertEquals("4444111122223333 12/24 123 Alex Keaton", card.toString());
 		
-		BoatJosephRathbun boat = new BoatJosephRathbun("SpeedyBoat", Color.GREEN);
+		Boat boat = new Boat("SpeedyBoat", Color.GREEN);
 		boat.setPrice(19995);
 				
 		CreditCardCharge charge = new CreditCardCharge(2020, 8, 14, boat, "BoatCo", card);
