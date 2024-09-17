@@ -54,7 +54,7 @@ public abstract class Character
 	public Character()
 	{
 		name = null;
-		
+			
 		health = 0;
 		
 		color = null;
