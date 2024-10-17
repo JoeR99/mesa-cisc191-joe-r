@@ -9,7 +9,7 @@ package M6ObjectOrientedDesign;
  * 
  * <<add more references here>>
  *  
- * Version/date: 09/24/2024
+ * Version/date: 10/17/2024
  * 
  * Responsibilities of class: Creates a simple string object as an option. Used with Vehicle class to make an array of this type of object.
  * 
@@ -24,12 +24,12 @@ public class Option
 		option = null;
 	}
 	
-	public String getDetails()
+	public String getDetails() // Accessor for Option
 	{
 		return option;
 	}
 	
-	public Option(String newOption)
+	public Option(String newOption) 
 	{
 		this();
 		
