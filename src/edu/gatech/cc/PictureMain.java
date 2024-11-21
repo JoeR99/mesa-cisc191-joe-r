@@ -15,7 +15,7 @@ public class PictureMain
 	 */
 	public static void main(String[] args)
 	{
-		Picture picture = new Picture(PictureExplorer.imageFolderName + "kpink.png");
+		Picture picture = new Picture(PictureExplorer.imageFolderName + "beach.png");
 
 		/**
 		 * Instructions: As you complete a given filter, you must enable the button in

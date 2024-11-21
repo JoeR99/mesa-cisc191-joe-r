@@ -44,7 +44,7 @@ public class M23challJoeRTest
 	{
 
 		/* Create two identical Picture objects from the same picture */
-		Picture studentSol = new Picture("bees.png");
+		Picture studentSol = new Picture("images/beach.png");
 
 		/* apply the zeroBlue filter */
 		M23challJoeR.zeroBlue(studentSol);
@@ -79,7 +79,7 @@ public class M23challJoeRTest
 	{
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png");
+		Picture p = new Picture("images/beach.png");
 
 		// Apply the student code and solution code
 		M23challJoeR.blackAndWhite(p);
@@ -109,7 +109,7 @@ public class M23challJoeRTest
 	{
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png"); // make sure you're using this image as the tester needs it
+		Picture p = new Picture("images/beach.png"); // make sure you're using this image as the tester needs it
 
 		// Apply the student code and solution code
 		M23challJoeR.negative(p);
@@ -141,7 +141,7 @@ public class M23challJoeRTest
 	void testSunset()
 	{
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png");
+		Picture p = new Picture("images/beach.png");
 
 		// Apply the student code and solution code
 		M23challJoeR.makeSunset(p, 1.5, .9);
@@ -182,8 +182,8 @@ public class M23challJoeRTest
 		// Horizontally or from left to right.
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png");
-		Picture original = new Picture("beach.png");
+		Picture p = new Picture("images/beach.png");
+		Picture original = new Picture("images/beach.png");
 
 		// Apply the student code and solution code
 		M23challJoeR.mirrorHorizontal(p);
@@ -233,8 +233,8 @@ public class M23challJoeRTest
 		// (from top to bottom).
 
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png");
-		Picture p2 = new Picture("beach.png"); // original
+		Picture p = new Picture("images/beach.png");
+		Picture p2 = new Picture("images/beach.png"); // original
 
 		// Apply the student code and solution code
 		M23challJoeR.mirrorVertical(p);
@@ -270,8 +270,8 @@ public class M23challJoeRTest
 	void testBlur()
 	{
 		// Create two Picture image objects using the same image file
-		Picture p = new Picture("beach.png");
-		Picture p2 = new Picture("beach.png"); // original
+		Picture p = new Picture("images/beach.png");
+		Picture p2 = new Picture("images/beach.png"); // original
 
 		// Apply the student code and solution code
 		M23challJoeR.blur(p);

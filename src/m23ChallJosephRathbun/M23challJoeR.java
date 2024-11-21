@@ -23,9 +23,7 @@ public class M23challJoeR
 				pixel2D[r][c].setBlue(0);
 			}
 		}
-
-	}
-	
+	}	
 	
 	/**
 	 * Alters the picture so that each pixel's RGB channel has been set to the average of each pixel.
