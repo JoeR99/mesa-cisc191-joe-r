@@ -1,7 +1,7 @@
 /**
  * 
  */
-package m23ChallJosephRathbun;
+package M23ChallJosephRathbun;
 
 import edu.gatech.cc.PictureMain;
 

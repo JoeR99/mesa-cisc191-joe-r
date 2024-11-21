@@ -8,7 +8,7 @@ import java.nio.file.FileSystems;
 
 import javax.swing.border.*;
 
-import m23ChallJosephRathbun.M23challJoeR;
+import M23ChallJosephRathbun.M23challJoeR;
 
 /**
  * Displays a picture and lets you explore the picture by displaying the row,

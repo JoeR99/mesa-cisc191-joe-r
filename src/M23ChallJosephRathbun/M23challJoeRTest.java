@@ -1,4 +1,4 @@
-package m23ChallJosephRathbun;
+package M23ChallJosephRathbun;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
