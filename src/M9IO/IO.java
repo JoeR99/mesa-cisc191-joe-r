@@ -135,7 +135,6 @@ public class IO
 			
 			scan = new Scanner(url.openStream());
 			
-			
 			while(scan.hasNext())
 			{
 				content += scan.next();

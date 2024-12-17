@@ -32,7 +32,7 @@ class IOTest
 	@Test
 	void testReadTestResultsDoesNotExist()
 	{
-		String results = IO.readTestResults("IDo		NotExist.csv");
+		String results = IO.readTestResults("IDoNotExist.csv");
 		assertEquals("", results);
 	}
 	
